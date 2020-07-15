@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 
-public class DBGuestTis { 
+public class DBGuest_StoredProcedure2 { 
 		Connection CN=null;//DB서버정보및 user/pwd기억, CN참조해서 명령어생성
 		Statement ST=null;//정적인명령어 ST=CN.createStatement(X);
 		PreparedStatement PST=null; //동적인명령어 PST=CN.prepareStatememt(msg)
@@ -20,7 +20,7 @@ public class DBGuestTis {
 		int Gtotal=0; //전체레코드갯수
 		Scanner sc = new Scanner(System.in);
 			
-	 public DBGuestTis() {
+	 public DBGuest_StoredProcedure2() {
 		 try{
 	     Class.forName("oracle.jdbc.driver.OracleDriver"); //드라이브로드
 	     String url="jdbc:oracle:thin:@127.0.0.1:1521:XE" ;
@@ -31,7 +31,7 @@ public class DBGuestTis {
 	 }//생성자
 	 
 	public static void main(String[] args) {
-		DBGuestTis gg = new DBGuestTis();
+		DBGuest_StoredProcedure2 gg = new DBGuest_StoredProcedure2();
 				
 		Scanner scin = new Scanner(System.in);
 		while(true) {
